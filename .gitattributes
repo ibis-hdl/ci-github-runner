@@ -1,0 +1,6 @@
+# force everything to be LF
+* text=auto eol=lf
+
+# ... except for Windows batch files that require CRLF
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf

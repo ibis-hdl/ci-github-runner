@@ -1,0 +1,24 @@
+# Docker Github Actions Runner
+# https://github.com/myoung34/docker-github-actions-runner
+version: '3'
+
+services:
+  worker:
+    image: myoung34/github-runner:latest
+    env_file:
+      - github_pat.txt
+    environment:
+      REPO_URL: https://github.com/ibis-hdl/compiler
+      #ACCESS_TOKEN stored in env file
+      RUNNER_NAME: '${GH_RUNNER_NAME:-github-runner}'
+      RUNNER_SCOPE: '${GH_RUNNER_SCOPE:-repo}'
+      RUNNER_WORKDIR: '${GH_RUNNER_WORKDIR:-/home/runner/work}'
+      LABELS: ${GH_RUNNER_LABELS-}
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+      - label:disable
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - '/tmp/runner:/tmp/runner'

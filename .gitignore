@@ -1,0 +1,18 @@
+## most important: secure GitHub's Personal Access Token (PAT)
+github_pat.txt
+
+## Ignore common dev files
+*.patch
+*.rej
+*.orig
+*.org
+*.bak
+
+## Windows
+desktop.ini
+Thumbs.db
+
+## OS/X
+.DS_Store
+._files
+

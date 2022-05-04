@@ -1,0 +1,7 @@
+## most important: secure GitHub's Personal Access Token (PAT)
+github_pat.txt
+
+## other
+.git
+.ssh
+.devcontainer
