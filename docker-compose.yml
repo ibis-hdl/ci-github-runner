@@ -6,10 +6,10 @@ services:
   worker:
     image: myoung34/github-runner:latest
     env_file:
+      # ACCESS_TOKEN stored in:
       - github_pat.txt
     environment:
-      REPO_URL: https://github.com/ibis-hdl/compiler
-      #ACCESS_TOKEN stored in env file
+      REPO_URL: https://github.com/ibis-hdl/ci-cmake-test
       RUNNER_NAME: '${GH_RUNNER_NAME:-github-runner}'
       RUNNER_SCOPE: '${GH_RUNNER_SCOPE:-repo}'
       RUNNER_WORKDIR: '${GH_RUNNER_WORKDIR:-/home/runner/work}'
