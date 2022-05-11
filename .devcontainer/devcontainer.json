@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/docker-existing-docker-compose
 {
-	"name": "Github Action Runner (Linux)",
+	"name": "Github Action Runner",
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],

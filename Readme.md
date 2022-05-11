@@ -7,22 +7,23 @@ myoung34's [Docker Github Actions Runner](https://github.com/myoung34/docker-git
 
 ## Usage
 
-You can create a `.env` to provide environment variables when using docker-compose, e.g.:
+Optionally, you can create a `.env` to provide environment variables when using docker-compose, e.g.:
 
 ```
+GH_REPO_URL=https://github.com/ibis-hdl/compiler
 GH_RUNNER_NAME="localhost"
 GH_RUNNER_LABELS="compiler"
-GH_RUNNER_WORKDIR=/home/ibis-hdl/work
+GH_RUNNER_WORKDIR=/home/runner/work
 ```
 
-It's not mandatory and the `docker-compose.yml` holds predefined values, intentionally project related.
+It's not mandatory since the `docker-compose.yml` holds predefined values, intentionally project related.
 
-In order to link your runner to repository, an `ACCESS_TOKEN` containing a [Personal Access Token](https://github.com/settings/tokens) (PAT) is required. This token will be used to dynamically fetch a new runner token, as runner tokens are valid for a short period of time (1 hour).
+In order to link your runner to repository, an `ACCESS_TOKEN` containing a [Personal Access Token](https://github.com/settings/tokens) (PAT) is required. This token will be used to dynamically fetch a new runner token, as runner tokens are valid for a short period of time (1 hour) only.
 
-To prevent accidental publication, the PAT is in a separate `github_pat.txt` file stored:
+To prevent accidental publication of the PAT the secret is stored in a separate `github_pat.txt` file:
 
 ```
 ACCESS_TOKEN=<PAT goes here>
 ```
 
-and entered in `.gitignore` and `.dockerignore`.
+and excluded from publishing by use of `.gitignore` and `.dockerignore`.
