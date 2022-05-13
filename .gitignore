@@ -1,5 +1,5 @@
 ## most important: secure GitHub's Personal Access Token (PAT)
-github_pat.txt
+secrets.txt
 
 ## Ignore common dev files
 *.patch
