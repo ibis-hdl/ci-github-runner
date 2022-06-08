@@ -7,7 +7,7 @@ ENV AGENT_TOOLSDIRECTORY=/opt/hostedtoolcache
 RUN mkdir -p /opt/hostedtoolcache
 
 # https://github.com/actions/runner/releases
-ARG GH_RUNNER_VERSION="2.291.1"
+ARG GH_RUNNER_VERSION="2.292.0"
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

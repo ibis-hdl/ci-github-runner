@@ -20,7 +20,7 @@ It's not mandatory since the `docker-compose.yml` holds predefined values, inten
 
 In order to link your runner to repository, an `ACCESS_TOKEN` containing a [Personal Access Token](https://github.com/settings/tokens) (PAT) is required. This token will be used to dynamically fetch a new runner token, as runner tokens are valid for a short period of time (1 hour) only.
 
-To prevent accidental publication of the PAT the secret is stored in a separate `github_pat.txt` file:
+To prevent accidental publication of the PAT the secret is stored in a separate `secrets.txt` file:
 
 ```
 ACCESS_TOKEN=<PAT goes here>
